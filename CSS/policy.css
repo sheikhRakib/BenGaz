@@ -1,0 +1,21 @@
+
+body {
+	background-color: #e6ded2;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+#policy_list
+{
+	text-align: justify;
+    text-justify: inter-word;
+    margin:50px 150px;
+}
+p
+{
+	font-size: 18px;
+}
+h4
+{
+	font-size: 22px;
+}

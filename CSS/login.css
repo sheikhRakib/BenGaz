@@ -1,0 +1,51 @@
+body
+{
+	background-color: #efefef;
+	width:100%;
+	margin:0;
+	padding: 0;
+}
+.login-form
+{		
+	background-color: #ffffff;
+	border:1px solid #dddddd;
+	width: 20%;
+	padding: 20px;
+	margin: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	text-align: center;
+}
+.form-group
+{
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 21px;
+}
+.form-control
+{
+	width: 80%;
+	border: 2px solid #d1edf1;
+	border-radius: 2px;
+	font-size: 20px;
+	margin: 0px;
+	padding: 6px 10px;
+}
+.btn_submit:hover
+{
+	background-color: #47d194;
+}
+.btn_submit
+{
+	padding: 6px 12px;
+	font-size: 20px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #2e9b6c;
+	border-color: #27825a;
+}
+a {text-decoration: none; color: #334e7a;}
+a:hover {text-decoration: none; color: #5f97ef;}

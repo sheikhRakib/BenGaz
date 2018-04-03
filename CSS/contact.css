@@ -1,0 +1,15 @@
+body {
+	background-color: #e6ded2;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.info{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:20px;
+	margin:0;
+	color:#666;
+	font-size:20px;
+	margin-bottom:5px;
+}
