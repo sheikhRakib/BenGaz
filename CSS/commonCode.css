@@ -1,0 +1,58 @@
+#main_body
+{
+    width: 85%;
+    margin: auto;
+}
+#header_logo
+{
+    background-color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+}
+#nav_bar
+{
+	position: sticky;
+    top: 0;
+}
+#bar_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #363b40;
+}
+.bar_list_item {
+    float: left;
+}
+
+.bar_list_item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.bar_list_item a:hover {
+    background-color: #111;
+}
+#footer
+{
+	width: 100%;
+	padding: 20px 0px;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #282E28;
+	text-align: center;
+    clear: both;
+    display: block;
+}
+#footer p
+{
+	margin: 0px;
+}
+.footer_links
+{
+	text-decoration: underline;
+	color: white;
+}
