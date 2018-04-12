@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2018 at 05:50 PM
+-- Generation Time: Apr 12, 2018 at 09:14 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -106,6 +106,30 @@ CREATE TABLE `newsimages` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `onthisday`
+--
+
+CREATE TABLE `onthisday` (
+  `ID` int(10) NOT NULL,
+  `eventDate` date NOT NULL,
+  `event` varchar(1000) NOT NULL,
+  `deleted_on` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `onthisday`
+--
+
+INSERT INTO `onthisday` (`ID`, `eventDate`, `event`, `deleted_on`) VALUES
+(400441, '1991-04-10', 'Kings\'s revolution', NULL),
+(400442, '0491-04-11', 'Flavius Anastasius becomes Byzantine emperor, with the name of Anastasius I.', NULL),
+(400443, '0491-04-11', 'People\'s Revolution', NULL),
+(400444, '1814-04-11', 'Napoleon abdicates unconditionally; he is exiled to Elba1865 Abraham Lincoln urges a spirit of generous conciliation during reconstruction.', NULL),
+(400445, '1881-04-11', 'Spelman College is founded in Atlanta, Georgia as the Atlanta Baptist Female Seminary, an institute of higher education for African-American women.', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tags`
 --
 
@@ -185,6 +209,12 @@ ALTER TABLE `newsimages`
   ADD KEY `NewsImages_fk0` (`newsID`);
 
 --
+-- Indexes for table `onthisday`
+--
+ALTER TABLE `onthisday`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
@@ -232,6 +262,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `newsimages`
   MODIFY `newsImageID` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `onthisday`
+--
+ALTER TABLE `onthisday`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=400446;
 
 --
 -- AUTO_INCREMENT for table `tags`
