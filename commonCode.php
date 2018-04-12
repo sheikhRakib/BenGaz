@@ -1,10 +1,14 @@
 <?php
 //============================
+//you will need to the "CSS/CommonCode.css" file to use these functions 
 //function lists
 //
 //TITLE_LOGO(); //for logo
 //NAVIGATION_BAR(); // for navigation
 //FOOTER(); //for footer
+//DB_START(); // for DB connect
+//DB_STOP($conn); // for DB disconect
+//DataSanitize($value) // for sanitizaing data
 //
 //=================================
 
@@ -19,8 +23,6 @@ function TITLE_LOGO()
 		</a>
 	</div>';
 } //title logo ends
-
-
 
 // navigation bar function
 // this will call the sticky navigation bar
@@ -38,12 +40,11 @@ function NAVIGATION_BAR()
 		  	<li class="bar_list_item"><span><a href="#">Entertainment</a></span></li>
 		  	<li class="bar_list_item"><span><a href="#">Technology</a></span></li>
 			<li class="bar_list_item"><span><a href="#">LifeStyle</a></span></li>
-			<li class="bar_list_item"><span><a href="#">Opinion</a></span></li>
+			<li class="bar_list_item"><span><a href="opinion/">Opinion</a></span></li>
 			<li class="bar_list_item"><span><a href="#">Photo</a></span></li>
 		</ul>
 	</div>';
 } // end function navigation bar
-
 
 //footer function
 function FOOTER()
@@ -51,15 +52,43 @@ function FOOTER()
 	echo'
 		<div id="footer">
 			<p>Bengal Gazette | &copy 1780-' . date("Y").'<br>
-				About | 
+				<a class="footer_links" href="about.php">About</a> | 
 				<a class="footer_links" href="policy.php">Policy</a> |
 				<a class="footer_links" href="contact.php">Contact Us</a>
 			</p>
 		</div>';
 } //end function footer
 
+//database start functions
+function DB_START()
+{
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$databasename = "bengaz";
+	$conn = mysqli_connect($servername,$username,$password,$databasename);
 
+	if ($conn->connect_error) 
+	{
+    	die("Connection failed: " . $conn->connect_error);
+	}
 
+	return $conn;
+} //end function db start
+//
+function DB_STOP($conn)
+{
+	mysqli_close($conn);
+}
+
+function DataSanitize($value)
+{
+	$value = trim($value);
+	$value = stripcslashes($value);
+	$value = strip_tags($value);
+
+	return $value;
+}
 
 
 
