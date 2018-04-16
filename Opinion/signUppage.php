@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once ("../commonCode.php");
 // initializing variables
 $username = "";
 $email    = "";
@@ -55,3 +55,4 @@ if (isset($_POST['reg_user'])) {
   }
   DB_STOP($db);
 }
+
