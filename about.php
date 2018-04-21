@@ -18,7 +18,7 @@
 				<h1>Meet The Team</h1>
 			</div>
 			<div class="card">
-				<img class="card_img" src="https://imagez.to/i/HIxUiwVr.jpg" alt="khalid">
+				<img class="card_img" src="img/khalid.jpg" alt="khalid">
 				<h1>Khalid Hossain</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img class="card_img" src="https://imagez.to/i/30bwLNZR.jpg" alt="promi">
+				<img class="card_img" src="img/promi.jpg" alt="promi">
 				<h1>Noshin Tabassum</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img class="card_img" src="https://imagez.to/i/isLHyx6w.jpg" alt="borhan">
+				<img class="card_img" src="img/borhan.jpg" alt="borhan">
 				<h1>Borhan Uddin</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img class="card_img" src="https://imagez.to/i/6B6bzfsq.jpg" alt="novera">
+				<img class="card_img" src="img/novera.jpg" alt="novera">
 				<h1>Novera Alam</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img class="card_img" src="https://avatars1.githubusercontent.com/u/24943853?s=400&u=7e282038841a09b496674c5177e35c10eff79b35&v=4" alt="Rakib">
+				<img class="card_img" src="img/turin.jpg" alt="Rakib">
 				<h1>Rakibul Islam</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
