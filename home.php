@@ -6,7 +6,7 @@
 		$today = getdate();
 		$today = $today["mon"]."-".$today["mday"];
 
-		$sql = "SELECT * FROM `onthisday` WHERE `eventDate` LIKE '%".$today."' AND `deleted_on` IS null";
+		$sql = "SELECT * FROM `onthisday` WHERE `eventDate` LIKE '%".$today."' AND `deleted_on` IS null ORDER BY `eventDate`  ASC";
 		$result = mysqli_query($conn, $sql);
 		if(mysqli_num_rows($result) == 0) {
 			echo ' 
@@ -68,27 +68,42 @@
 			<div class="leftColumn">
 				<!-- featured news -->
 				<div class="featured_news">
-					<img src="IMG/tesat.jpg"><br>
-					<h2 class="hot_news_headline">Arrested Alchemist Must Make Gold To Win Freedom</h2>
+					<img src="IMG/test.jpg"><br>
+					<a class="featured_news_headline" href="#">Arrested Alchemist Must Make Gold To Win Freedom</a>
 				</div>
 				<!-- featured news ends -->
 
 				<!-- normal news section -->
-				<div class="news_section">
-					<div style="width: 100%;">
+				<div>
+					<div class="news_section">
+						<h2 class="category">Bangladesh</h2>
 						<div class="news">
-							<img class="news_image" src="photo.png">
-							<h2 class="news_headline">Communist Party to regulate China’s media, film 	industry</h2>
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
 						</div>
-
 						<div class="news">
-							<img class="news_image" src="photo.png">
-							<h2 class="news_headline">Communist Party to regulate China’s media, film 	industry</h2>
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
 						</div>
-
 						<div class="news">
-							<img class="news_image" src="photo.png">
-							<h2 class="news_headline">Communist Party to regulate China’s media, film 	industry</h2>
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
+						</div>
+					</div>
+
+					<div class="news_section">
+						<h2 class="category">Bangladesh</h2>
+						<div class="news">
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
+						</div>
+						<div class="news">
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
+						</div>
+						<div class="news">
+							<img class="news_image" src="IMG/test.jpg">
+							<a class="news_headline" href="#">Communist Party to regulate China’s media, film 	industry</a>
 						</div>
 					</div>
 				</div>
