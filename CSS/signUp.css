@@ -1,93 +1,69 @@
-    body {
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
     font-family: "Lato", sans-serif;
-    background-color: #ffffff;
-    } 
-
-    input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-    input[type=date], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-    input[type=email], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-    input[type=password], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-    input[type=submit], select {
+    background-color: #3a404c;
+} 
+.slogan {
+    color: #ffffff;
     width: 50%;
+    float: left; 
+    font-size: 28px;
+    padding-top: 200px;
+    padding-left: 150px;
+}
+.form {
+    float: left;
+    margin-top: 80px;
+    color: #ffffff;
+}
+.lbl {
+    text-align: right;
+    padding-right: 20px;
+}
+input[type=text], input[type=password], input[type=email], input[type=date] {
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    }
-
-    input[type=reset], select {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
+}
+input[type=submit], input[type=reset]{
+    padding: 15px 25px;
+    margin: 8px 5px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    }
-
-    h3{
-        font-family: "Lato", sans-serif;
-        font-size: 25pt;
-        font-style: normal;
-        font-weight: bold;
-        color:#0000ff;
-        text-align: center;
-        text-decoration:;
-    }
-
-    table{
-        float:right;
-        font-family:"Lato", sans-serif;
-        color:white;
-        font-size: 15pt;
-        font-style: normal;
-        font-weight: bold;
-        text-align: left;
-        background-color: #465368;
-        border-collapse: collapse;
-        border: 2px solid navy
-    }
-
-    div {
-    margin-right: 160px; 
-    font-size: 28px; 
-    padding: 120px 100px;
-    }
+}
+h3{
+    font-family: "Lato", sans-serif;
+    font-size: 25pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+table{
+    font-family:"Lato", sans-serif;
+    font-size: 15pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    border-collapse: collapse;
+}
+.error
+{
+    width: 92%;
+    margin: 0px auto;
+    padding: 1px;
+    border:1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
