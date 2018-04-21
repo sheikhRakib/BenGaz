@@ -1,30 +1,7 @@
 <?php
-	session_start();
+session_start();
+require_once ("../commonCode.php");
 
-   	$userName="";
-   	$password="";
-   	$errors = array();
-   	
-   	if(isset($_POST['submit']))
-   	{
-	   	$userName = $_POST['userName'];
-	   	$password = $_POST['password'];
-	   
-	   	if (empty($userName)) {
-	   		array_push($errors, "Username required");
-	   	}
-	   	if (empty($password)) {
-	   		array_push($errors, "Password required");
-	   	}
-	   	if (count($errors) == 0) {
-	   		if(isValidUser($userName, $password)) {
-				header("location: profile.php");
-			}
-			else {
-				array_push($errors, "Wrong username/password");
-			}
-	   	}
-	}
 //this function will show the login form
 function LOGIN_FORM()
 {
@@ -33,7 +10,7 @@ function LOGIN_FORM()
 	<div class="container">
 		<!-- logo -->
 		<div>
-			<a href="../home.php"><img src="../IMG/BengalGazetteLogo.png" style="width: 90%;height: auto;"></a>
+			<a href="../Opinion/index.php"><img src="../IMG/BengalGazetteLogo.png" style="width: 90%;height: auto;"></a>
 			<hr>
 			<p><i>Login with your Bengal Gazette account.</i></p>
 			<br>
@@ -41,9 +18,17 @@ function LOGIN_FORM()
 		<!--Form Body-->
 		<div>
 			<form action="" method="post">
-				<input type="text" name="userName" placeholder="USERNAME" autocomplete="off">
-				<input type="password" name="password" placeholder="PASSWORD" autocomplete="off" minlength="3">
-				<input class=".btn_submit" type="submit" name="submit" value="ENTER">
+				<input type="text" name="username" placeholder="USERNAME" autocomplete="off">
+				<input type="password" name="password" placeholder="PASSWORD" autocomplete="off">';
+				if (isset($_SESSION['error'])) {
+					echo '
+						<div class="error">
+							<p>'.$_SESSION['error'].'</p>
+						</div> ';
+						unset($_SESSION['error']);
+				}
+				echo '
+				<input type="submit" name="submit" value="ENTER">
 				<div>
 					<a href="registration.php">Not a member?</a> <b>||</b>
 					<a href="login.php?ref=forgetpassword">Can’t access account?</a>
@@ -53,6 +38,35 @@ function LOGIN_FORM()
 	</div>';
 } //end LOGIN_FORM()
 
+if(isset($_POST['submit'])) {
+	$username="";
+	$password="";
+
+	$username = DataSanitize($_POST['username']);
+	$password = DataSanitize($_POST['password']);
+
+	if ($username != "" && $password != "") {
+		$conn = DB_START();
+		$sql = "SELECT * FROM users WHERE username='$username' and password=md5('$password')";
+		$result = mysqli_query($conn,$sql);
+		if(mysqli_num_rows($result) == 1)
+		{
+			$_SESSION['username'] = $username;
+			$_SESSION['loggedIn'] = "true";
+			DB_STOP($conn);
+			header("location: profile.php");
+			exit();
+		}
+		else
+		{
+			DB_STOP($conn);
+			$_SESSION['error'] = "wrong username/password";
+		}
+	}
+	else {
+		$_SESSION['error'] = "one/more field empty";
+	}
+}
 //end php
 ?>
 
@@ -68,15 +82,13 @@ function LOGIN_FORM()
 <body>
 	<?php
 	// this if statement will check if the user is able to logged in or not 
-	if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == 'false')
+	if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] == 'false')
 	{
 		LOGIN_FORM();
 	}
-	else
-	{
-		header('location: index.php');
+	else if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 'true') {
+		header("location: profile.php");
 	}
-	?>
-	
+	?>	
 </body>
 </html>
