@@ -41,8 +41,9 @@
 </head>
 <body>
 	<div class="card">
-		<img src="https://imagez.to/i/HIxUiwVr.jpg" alt="khalid" style="width:75%">
-		<h1>Khalid Hossain</h1>
+		<img src="img/khalid.jpg" alt="khalid" style="width:75%">
+	<!--	<img src="https://imagez.to/i/HIxUiwVr.jpg" alt="khalid" style="width:75%">
+	-->	<h1>Khalid Hossain</h1>
 		<p class="title">Student</p>
 		<p>American International University - Bangladesh</p>
 		<div style="margin: 24px 0;">
@@ -52,7 +53,7 @@
 		</div>
 	</div>
 	<div class="card">
-		<img src="https://imagez.to/i/30bwLNZR.jpg" alt="promi" style="width:70%">
+		<img src="img/promi.jpg" alt="promi" style="width:70%">
 		<h1>Noshin Tabassum Promi</h1>
 		<p class="title">Student</p>
 		<p>American International University - Bangladesh</p>
@@ -62,7 +63,7 @@
 		</div>
 	</div>
 	<div class="card">
-		<img src="https://imagez.to/i/isLHyx6w.jpg" alt="borhan" style="width:93%">
+		<img src="img/borhan.jpg" alt="borhan" style="width:93%">
 		<h1>Borhan Uddin</h1>
 		<p class="title">Student</p>
 		<p>American International University - Bangladesh</p>
@@ -73,7 +74,7 @@
 		</div>
 	</div>
 	<div class="card">
-		<img src="https://imagez.to/i/6B6bzfsq.jpg" alt="novera" style="width:65%">
+		<img src="img/novera.jpg" alt="novera" style="width:65%">
 		<h1>Novera Alam</h1>
 		<p class="title">Student</p>
 		<p>American International University - Bangladesh</p>
@@ -82,7 +83,7 @@
 		</div>
 	</div>
 	<div class="card">
-		<img src="https://avatars1.githubusercontent.com/u/24943853?s=400&u=7e282038841a09b496674c5177e35c10eff79b35&v=4" alt="Rakib" style="width:97%">
+		<img src="img/turin.jpg" alt="Rakib" style="width:97%">
 		<h1>Rakibul Islam</h1>
 		<p class="title">Student</p>
 		<p>American International University - Bangladesh</p>
