@@ -66,7 +66,7 @@ function DB_START()
 	$username = "root";
 	$password = "";
 	$databasename = "bengaz";
-	$conn = mysqli_connect($servername,$username,$password,$databasename);
+	$conn = mysqli_connect($servername, $username, $password, $databasename);
 
 	if ($conn->connect_error) 
 	{
@@ -90,7 +90,31 @@ function DataSanitize($value)
 	return $value;
 }
 
-
-
-
+function STICKY_SOCIAL_BAR()
+{
+	echo '<div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="IMG/facebook.png" width="32" height="32">
+            <p><a href="https://www.facebook.com" target="_blank">Like Us on<br>Facebook</a></p>
+        </li>
+        <li>
+            <img src="IMG/twitter.png" width="32" height="32">
+            <p><a href="https://twitter.com" target="_blank">Follow Us on<br>Twitter</a></p>
+        </li>
+        <li>
+            <img src="IMG/g-plus.JPG" width="32" height="32">
+            <p><a href="https://plus.google.com" target="_blank">Follow Us on<br>Google+</a></p>
+        </li>
+        <li>
+            <img src="IMG/linkedin.png" width="32" height="32">
+            <p><a href="https://www.linkedin.com" target="_blank">Follow Us on<br>LinkedIn</a></p>
+        </li>
+        <li>
+            <img src="IMG/youtube.png" width="32" height="32">
+            <p><a href="http://www.youtube.com" target="_blank">Subscribe on<br>YouYube</a></p>
+        </li>
+    </ul>
+</div>';
+}
 ?>
