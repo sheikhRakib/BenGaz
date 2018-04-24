@@ -59,7 +59,7 @@ a{text-decoration: none;}
 	font-family:Verdana;
 	font-size: 20px;
 }
-.bar_btn:hover{background-color: #96947c;}
+.bar_btn:hover{background-color: #96947c;text-decoration: none;}
 #search_box
 {
 	float:right;
@@ -123,4 +123,14 @@ a{text-decoration: none;}
 {
 	text-decoration: underline;
 	color: white;
+}
+.opinion {
+	background-color: #e0e0e0e0;
+}
+.aa{
+	color: black;
+	font-size: 30px;
+}
+.aa:hover {
+	color: black;
 }
