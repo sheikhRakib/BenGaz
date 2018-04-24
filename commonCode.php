@@ -32,14 +32,14 @@ function NAVIGATION_BAR()
 	<div id="nav_bar">
 		<ul id="bar_list">
 			<li class="bar_list_item"><span><a href="home.php">Feature</a></span></li>
-			<li class="bar_list_item"><span><a href="bangladesh.php">Bangladesh</a></span></li>
-			<li class="bar_list_item"><span><a href="#">International</a></span></li>
-		  	<li class="bar_list_item"><span><a href="#">Corporate</a></span></li>
-		  	<li class="bar_list_item"><span><a href="#">Economics</a></span></li>
-			<li class="bar_list_item"><span><a href="#">Sports</a></span></li>
-		  	<li class="bar_list_item"><span><a href="#">Entertainment</a></span></li>
-		  	<li class="bar_list_item"><span><a href="#">Technology</a></span></li>
-			<li class="bar_list_item"><span><a href="#">LifeStyle</a></span></li>
+			<li class="bar_list_item"><span><a href="news.php?c=101">Bangladesh</a></span></li>
+			<li class="bar_list_item"><span><a href="news.php?c=102">International</a></span></li>
+		  	<li class="bar_list_item"><span><a href="news.php?c=105">Corporate</a></span></li>
+		  	<li class="bar_list_item"><span><a href="news.php?c=106">Economics</a></span></li>
+			<li class="bar_list_item"><span><a href="news.php?c=104">Sports</a></span></li>
+		  	<li class="bar_list_item"><span><a href="news.php?c=107">Entertainment</a></span></li>
+		  	<li class="bar_list_item"><span><a href="news.php?c=108">Technology</a></span></li>
+			<li class="bar_list_item"><span><a href="news.php?c=109">LifeStyle</a></span></li>
 			<li class="bar_list_item"><span><a href="opinion/">Opinion</a></span></li>
 			<li class="bar_list_item"><span><a href="#">Photo</a></span></li>
 		</ul>

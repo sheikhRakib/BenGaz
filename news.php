@@ -1,6 +1,9 @@
-<?php  
+<?php
 	require_once("commonCode.php");
-	
+?>
+
+<!-- on this day -->
+<?php  
 	function ON_THIS_DAY() {
 		$conn = DB_START();
 		$today = getdate();
@@ -40,20 +43,18 @@
 		}
 	}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" href="IMG/IconLogo.png">
-	<title>Home | Bengal Gazette</title>
 	<meta charset="utf-8">
-	
+	<title>Bengal Gazette</title>
 	<link rel="stylesheet" type="text/css" href="CSS/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="CSS/commonCode.css">
 	<link rel="stylesheet" type="text/css" href="CSS/home.css">
 </head>
-
 <body>
-	<!--main div starts from here-->
 	<div id="main_body">
 		<!-- header icon and slogan -->
 		<?php TITLE_LOGO(); ?>
@@ -66,36 +67,55 @@
 		<div>
 			<!-- left column -->
 			<div class="leftColumn">
-				<!-- featured news -->
-				<div class="featured_news">
-					<img src="docs/test.png"><br>
-					<a class="featured_news_headline" href="#">Arrested Alchemist Must Make Gold To Win Freedom</a>
-				</div>
-				<!-- featured news ends -->
-
-				<!-- normal news section -->
-				<div>
-				<?php  
+			<?php
+			if(isset($_GET["c"])) {
+				$category = $_GET["c"];
+				if($category == "101" || $category == "102" || $category == "105" ||
+				$category == "106" || $category == "104" || $category == "107" ||
+				$category == "108" || $category == "109") {
 					$conn = DB_START();
-					$sql = "SELECT * FROM categories WHERE categoryID != 110 AND deleted_at IS NULL";
-					$res = mysqli_query($conn, $sql);
-					while ($cat = mysqli_fetch_array($res)) {
-						echo '<div class="news_section">';
-						echo '<h2 class="category">'.$cat["category"].'</h2>';
-
-						$sql1 = "SELECT news.newsID, news.headline, news.description, newsimages.imagePath FROM news,newsimages WHERE news.categoryID = ".$cat['categoryID']." AND news.newsID = newsimages.newsID AND news.deleted_at IS NULL ORDER BY newsID DESC LIMIT 3";
-						$ns = mysqli_query($conn, $sql1);
-						while($nws = mysqli_fetch_array($ns)) {
-							echo '<div class="news">';
-							echo '<img class="news_image" src="docs/'.$nws["imagePath"].'">';
-							echo '<a class="news_headline" href="news.php?q='.$nws["newsID"].'">'.$nws["headline"].'</a>';
-							echo '</div>';
-						}
-						echo '</div>';					
+					$sql = "SELECT news.newsID, news.headline, news.description, news.written_at, newsimages.imagePath FROM news, newsimages WHERE news.categoryID = ".$category." AND news.newsID = newsimages.newsID AND news.deleted_at IS NULL ORDER BY news.newsID";
+					$result = mysqli_query ($conn, $sql);
+					while ($news = mysqli_fetch_array($result)) {
+						echo '
+						<div class="panel panel-default" style="margin: 10px 0px;">
+							<img style="height: 80px;" src="docs/'.$news["imagePath"].'">
+							<a style="font-size: 25px;" href="news.php?q='.$news["newsID"].'">'.$news["headline"].'</a>
+						</div>';
 					}
-				?>
-				</div>
-				<!-- normal news ends -->
+					DB_STOP($conn);
+				}
+				else { header("location: home.php"); exit();}
+			}
+			elseif(isset($_GET["q"])) {
+				$nw = $_GET["q"];
+				$conn = DB_START();
+				$sql = "SELECT news.headline, news.description, news.popularity, news.written_at, newsimages.imagePath FROM news, newsimages WHERE news.newsID = ".$nw." AND news.categoryID != 110 AND news.newsID = newsimages.newsID AND news.deleted_at IS NULL";
+				$result = mysqli_query ($conn, $sql);
+				if(mysqli_num_rows($result) == 1) {
+					$news = mysqli_fetch_assoc($result);
+					echo '
+					<div class=" panel panel-default">
+						<div class="featured_news">
+							<img src="docs/'.$news["imagePath"].'"><br>
+							<h1>'.$news["headline"].'</h1>
+							<p class="panel panel-default">Time: '.$news["written_at"].'</p>
+							<p class="panel panel-default" style="text-align:justify;padding: 0px 30px;font-size:20px;">'.$news["description"].'</p>
+						</div>
+					</div>';
+					$popularity = $news["popularity"];
+					$popularity = $popularity + 1;
+					$sql="UPDATE `news` SET `popularity` = ".$popularity." WHERE `news`.`newsID` = ".$nw;
+					mysqli_query ($conn, $sql);
+				}
+				else { header("location: home.php"); exit();}
+				DB_STOP($conn);
+			}
+			else {
+				header("location: home.php");
+				exit();
+			}
+			?>
 			</div>
 			<!-- left col ends -->
 			
@@ -122,7 +142,6 @@
 				</div>
 				<!-- on this day ends -->
 
-				<!-- latest news -->
 				<div class="box">
 					<h5>Latest News</h5>
 					<hr>
@@ -143,7 +162,6 @@
 					DB_STOP($conn);
 				?>
 				</div>
-				<!-- latest news ends -->
 						
 				<div class="box">
 					<h5>Most Read News</h5>
@@ -174,6 +192,5 @@
 		<!-- footer ends -->
 	</div>
 	<?php STICKY_SOCIAL_BAR(); ?>
-		
 </body>
 </html>

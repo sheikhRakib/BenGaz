@@ -25,17 +25,17 @@
 			function validate()
 			{
 				if( (document.emailForm.text.value=="") || (document.emailForm.email.
-					value.search("@")==-1) || (document.emailForm.email.value.search("[.*]")==-1) )
+					value.search("@")==-1) || (document.emailForm.email.value.search("[@*.*]")==-1))
 				{
 					alert( "Please make sure the form is complete and valid." );
-				} else if ( (document.emailForm.email.value.search(";") != -1) ||
+				}else if ( (document.emailForm.email.value.search(";") != -1) ||
 			 		(document.emailForm.email.value.search(",") != -1) ||
 			 		(document.emailForm.email.value.search(" ") != -1) )
 				{
 					alert( "You cannot enter more than one e-mail address." );
 				}
 				else {
-					document.emailForm.action = "sendmessage.php";
+					alert("Message Sent...");
 					document.emailForm.submit();
 				}
 			}
@@ -50,7 +50,7 @@
 					<br>
 					<input name="email" id="inputtext2" class="inputbox" value="" type="email">
 					<br>
-					<label for="contact_subject">Message subject:</label>
+					a<label for="contact_subject">Message subject:</label>
 					<br>
 					<input name="subject" id="inputtext2" class="inputbox" value="" type="text">
 					<br><br>
