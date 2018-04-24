@@ -18,14 +18,14 @@
 				<h1>Meet The Team</h1>
 			</div>
 			<div class="card">
-				<img class="card_img" src="img/khalid.jpg" alt="khalid">
+				<img class="card_img" src="IMG/khalid.jpg" alt="khalid">
 				<h1>Khalid Hossain</h1>
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
 				<div style="margin: 24px 0;">
-					<a href="https://twitter.com/Ami_Arko" target="_blank"><img border="0" alt="twitter" src="https://imagez.to/i/6qs6FTEW.png" width="25" height="25"></a>  
-					<a href="https://www.facebook.com/yeasir.yeasin.9" target="_blank"><img border="0" alt="facebook" src="https://imagez.to/i/u1x0O2UB.png" width="25" height="25"></a>
-					<a href="https://www.linkedin.com/in/khalid-hossain-arko-528920122/" target="_blank"><img border="0" alt="linkedin" src="https://imagez.to/i/F8ZByoGf.png" width="25" height="25"></a>  
+					<a href="https://twitter.com/Ami_Arko" target="_blank"><img border="0" alt="twitter" src="IMG/twitter.png" width="25" height="25"></a>  
+					<a href="https://www.facebook.com/yeasir.yeasin.9" target="_blank"><img border="0" alt="facebook" src="IMG/facebook.png" width="25" height="25"></a>
+					<a href="https://www.linkedin.com/in/khalid-hossain-arko-528920122/" target="_blank"><img border="0" alt="linkedin" src="IMG/linkedin.png" width="25" height="25"></a>  
 				</div>
 			</div>
 			<div class="card">
@@ -34,8 +34,8 @@
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
 				<div style="margin: 24px 0;"> 
-					<a href="https://www.facebook.com/tabassum.promi" target="_blank"><img border="0" alt="facebook" src="https://imagez.to/i/u1x0O2UB.png" width="25" height="25"></a>
-					<a href="https://www.linkedin.com/in/tabassum-promi-470ab0141/" target="_blank"><img border="0" alt="linkedin" src="https://imagez.to/i/F8ZByoGf.png" width="25" height="25"></a>  
+					<a href="https://www.facebook.com/tabassum.promi" target="_blank"><img border="0" alt="facebook" src="IMG/facebook.png" width="25" height="25"></a>
+					<a href="https://www.linkedin.com/in/tabassum-promi-470ab0141/" target="_blank"><img border="0" alt="linkedin" src="IMG/linkedin.png" width="25" height="25"></a>  
 				</div>
 			</div>
 			<div class="card">
@@ -44,9 +44,9 @@
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
 				<div style="margin: 24px 0;">
-					<a href="https://twitter.com/Mdborhan1996" target="_blank"><img border="0" alt="twitter" src="https://imagez.to/i/6qs6FTEW.png" width="25" height="25"></a>  
-					<a href="https://www.facebook.com/borhan.uddin.1996" target="_blank"><img border="0" alt="facebook" src="https://imagez.to/i/u1x0O2UB.png" width="25" height="25"></a>
-					<a href="https://www.linkedin.com/in/md-borhan-600b23101/" target="_blank"><img border="0" alt="linkedin" src="https://imagez.to/i/F8ZByoGf.png" width="25" height="25"></a>  
+					<a href="https://twitter.com/Mdborhan1996" target="_blank"><img border="0" alt="twitter" src="IMG/twitter.png" width="25" height="25"></a>  
+					<a href="https://www.facebook.com/borhan.uddin.1996" target="_blank"><img border="0" alt="facebook" src="IMG/facebook.png" width="25" height="25"></a>
+					<a href="https://www.linkedin.com/in/md-borhan-600b23101/" target="_blank"><img border="0" alt="linkedin" src="IMG/linkedin.png" width="25" height="25"></a>  
 				</div>
 			</div>
 			<div class="card">
@@ -55,7 +55,7 @@
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
 				<div style="margin: 24px 0;"> 
-					<a href="https://www.facebook.com/novera.alam" target="_blank"><img border="0" alt="facebook" src="https://imagez.to/i/u1x0O2UB.png" width="25" height="25"></a> 
+					<a href="https://www.facebook.com/novera.alam" target="_blank"><img border="0" alt="facebook" src="IMG/facebook.png" width="25" height="25"></a> 
 				</div>
 			</div>
 			<div class="card">
@@ -64,9 +64,9 @@
 				<p class="title">Student</p>
 				<p>American International University - Bangladesh</p>
 				<div style="margin: 24px 0;">
-					<a href="https://twitter.com/sheikh2rin" target="_blank"><img border="0" alt="twitter" src="https://imagez.to/i/6qs6FTEW.png" width="25" height="25"></a>  
-					<a href="https://www.facebook.com/2rind" target="_blank"><img border="0" alt="facebook" src="https://imagez.to/i/u1x0O2UB.png" width="25" height="25"></a>
-					<a href="https://www.linkedin.com/in/sheikhrakib/" target="_blank"><img border="0" alt="linkedin" src="https://imagez.to/i/F8ZByoGf.png" width="25" height="25"></a>  
+					<a href="https://twitter.com/sheikh2rin" target="_blank"><img border="0" alt="twitter" src="IMG/twitter.png" width="25" height="25"></a>  
+					<a href="https://www.facebook.com/2rind" target="_blank"><img border="0" alt="facebook" src="IMG/facebook.png" width="25" height="25"></a>
+					<a href="https://www.linkedin.com/in/sheikhrakib/" target="_blank"><img border="0" alt="linkedin" src="IMG/linkedin.png" width="25" height="25"></a>
 				</div>
 			</div>
 		</div>
