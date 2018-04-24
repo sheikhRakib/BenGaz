@@ -13,13 +13,11 @@ a {
     float: left;
     padding: 0px;
     margin: 0px;
-    background-color: red;
 }
 .rightColumn {
     width: 32%;
     float: right;
     padding: 0px;
-    background-color: green;
 }
 .featured_news {
     background-color: #ffffff;
@@ -33,32 +31,54 @@ a {
     width: 100%;
     height: 420px;
 }
-.hot_news_headline
+.featured_news_headline
 {
+    color: green;
     padding: 0px;
     font-size: 43px;
-    /*position: absolute;*/
+    text-decoration: underline;
     bottom: 8px;
     left: 16px;
 }
+.featured_news_headline:hover {
+    color: red;
+}
+.news_section {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.category {
+    background-color: gray;
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
 .news
 {
-    background-color: #ffffff;
     display: inline-block;
+    background-color: #ffffff;
     width: 30%;
-    height: 250px;
-    margin-right: 3.2%;
+    height: 100px;
+    overflow: auto;
+    padding: 0px;
+    margin: 0px 11px;
 }
 .news_image
 {
     float: left;
-    height: 100px;
-    width: auto;
-    /*margin: 25px 90px 25px 90px;*/
+    height: 50px;
+    width: 50px;
+    margin: 5px 10px;
 }
 .news_headline
 {
+    font-size: 18px;
     padding: 0px;
+    text-decoration: underline;
+    color: black;
 }
 .on_this_day {
     background-color: #ffffff;
@@ -85,48 +105,37 @@ a {
     padding: 0px;
     height: 60px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .box 
 {
     background-color: white;
     padding: 5px 0px 5px 0px;
     margin-top: 5px;
     font-size:10px;
+    max-height: 500px;
+    overflow: auto;
 }
 .box h5
 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
 .box ul {
     line-height: normal;
+    text-decoration-style: none;
 }
 
 .box ul li {
+    margin: 5px 0px;
     margin-left: 20px;
     font-size: 15px;
 }
 
 .box ul li a{
-    margin-left:0px;
+    margin: 5px 0px;
     color: #292929;
 }
 
 .box ul li a:hover{
     text-decoration: none;
+    color: red;
 }

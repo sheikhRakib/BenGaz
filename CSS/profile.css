@@ -1,0 +1,71 @@
+body {
+	background-color: #e0e0e0;
+}
+#main_body {
+    margin: 10px 20px;
+    background-color: #FFFFFF;
+}
+.nav-default {
+	position: static;
+	top: 0px;
+	border:2px solid #0a3a87;
+}
+.nav_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+.nav_list_item {
+    float: left;
+    color: #0a3a87;
+    padding: 5px;
+    display: block;
+}
+.nav_list_item a {
+	color: #0a3a87;
+    text-align: center;
+    text-decoration: none;
+}
+.nav_list_item a:hover {
+    color: #3561a8;
+}
+.text {
+	padding: 20px 10px;
+	font-size: 40px;
+}
+table {width: 100%;}
+table,td
+{
+    text-align: center;
+    border:2px solid gray;
+    border-collapse: collapse;
+}
+table caption
+{
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+tr:nth-child(odd) {
+    background: #c6c6c6;
+}
+
+tr:nth-child(even) {
+    background: #f7d7d7;
+}
+th {
+    font-size: 25px;
+    color: white;
+    background-color: gray;
+}
+.ico
+{
+    width: 25px;
+    height: auto;
+}
+#mypost, #addpost
+{
+    max-height: 600px;
+    overflow: auto;
+}
