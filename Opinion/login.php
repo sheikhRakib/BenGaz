@@ -30,8 +30,8 @@ function LOGIN_FORM()
 				echo '
 				<input type="submit" name="submit" value="ENTER">
 				<div>
-					<a href="registration.php">Not a member?</a> <b>||</b>
-					<a href="login.php?ref=forgetpassword">Can’t access account?</a>
+					<a href="signUp.php">Not a member?</a> <b>||</b>
+					<a href="login.php?ref=forgetpassword" onclick="alert(\'Coming soon...\')">Can’t access account?</a>
 				</div>
 			</form>
 		</div>
