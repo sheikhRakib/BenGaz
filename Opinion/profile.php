@@ -122,10 +122,9 @@
                 					echo '<tr>
                 					<td>'.$opinion["headline"].'</td>
                 					<td>
-                						<a href="edit.php?id='.$opinion["newsID"].'" title="edit" target="_blank">
+                						<a href="#" title="edit" target="_blank" onclick="alert(\'Coming soon...\')">
                 							<img class="ico" src="../IMG/edit.png">
-                            			</a>
-                        				<span>&nbsp;&nbsp;</span>
+                						</a><span>&nbsp;&nbsp;</span>
                         				<a href="delete.php?id='.$opinion["newsID"].'" onClick="return confirm(\'Are you sure you want to delete?\')" title="delete">
                             				<img class="ico" src="../IMG/delete.png">
                         				</a>

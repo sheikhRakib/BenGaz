@@ -17,6 +17,7 @@
 			<ul>
 				<li class="login_reg"><a class="log_reg_btn" href="login.php">Login</a></li>
 				<li class="login_reg"><a class="log_reg_btn" href="signup.php">registration</a></li>
+				<li class="login_reg"><a class="log_reg_btn" href="/BenGaz/index.php">Bengal Gazette</a></li>
 			</ul>
 		</div>
 		<!--Logo-->
