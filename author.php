@@ -61,7 +61,7 @@ function author_profile() {
 		        <th style="width: 10%;">Action</th>
 	      	</tr>';
 	    $conn = DB_START();
-		$sql = "SELECT news.newsID, news.headline, news.description, categories.category, news.written_at FROM news,categories,users WHERE news.categoryID != 110 AND news.categoryID = categories.categotyID AND news.writterID = users.userID AND users.userName = '".$_SESSION["author"]."' AND news.deleted_at IS NULL ORDER BY news.newsID DESC";
+		$sql = "SELECT news.newsID, news.headline, news.description, categories.category, news.written_at FROM news,categories,users WHERE news.categoryID != 110 AND news.categoryID = categories.categoryID AND news.writterID = users.userID AND users.userName = '".$_SESSION["author"]."' AND news.deleted_at IS NULL ORDER BY news.newsID DESC";
 
 	    $result = mysqli_query($conn, $sql);
 	    

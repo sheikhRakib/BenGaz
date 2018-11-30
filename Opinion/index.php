@@ -41,10 +41,10 @@
 			<?php
 				$conn = DB_START();
 				if(isset($_GET["tab"]) && $_GET["tab"] == "recent") {
-					$sql = "SELECT * FROM news WHERE deleted_at is NULL ORDER BY newsID DESC";
+					$sql = "SELECT * FROM news WHERE categoryID = 110 AND deleted_at is NULL ORDER BY newsID DESC";
 				}
 				else {
-					$sql="SELECT * FROM news WHERE deleted_at is NULL ORDER BY popularity DESC";
+					$sql="SELECT * FROM news WHERE categoryID = 110 AND deleted_at is NULL ORDER BY popularity DESC";
 				}
 				$result = mysqli_query ($conn, $sql);
 				while ($opinion = mysqli_fetch_array($result)) {
